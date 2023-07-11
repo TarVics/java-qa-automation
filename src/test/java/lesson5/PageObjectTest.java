@@ -31,10 +31,6 @@ public class PageObjectTest extends BaseTest {
 
         System.out.println(mainPage().getMainPageItemsText());
 
-//        mainPage().getMainPageItems().get(2).click();
-//        detailItemPage().waitDetailPageImg();
-//        System.out.println(detailItemPage().getDetailItemName() + " " + detailItemPage().getDetailItemPrice());
-
 
         mainPage().clickBurgerMenu();
 
