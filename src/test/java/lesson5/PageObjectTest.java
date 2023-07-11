@@ -1,7 +1,5 @@
 package lesson5;
 
-import base.config.BaseTest;
-import base.pages.BurgerMenuPage;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
@@ -14,8 +12,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-import static base.Pages.*;
 import static com.codeborne.selenide.Selenide.$;
+
+import base.config.BaseTest;
+import base.pages.BurgerMenuPage;
+import static base.Pages.*;
 
 public class PageObjectTest extends BaseTest {
     BurgerMenuPage burgerMenuPage = new BurgerMenuPage();
@@ -29,6 +30,11 @@ public class PageObjectTest extends BaseTest {
         mainPage().wainUntilMainPageLoad();
 
         System.out.println(mainPage().getMainPageItemsText());
+
+//        mainPage().getMainPageItems().get(2).click();
+//        detailItemPage().waitDetailPageImg();
+//        System.out.println(detailItemPage().getDetailItemName() + " " + detailItemPage().getDetailItemPrice());
+
 
         mainPage().clickBurgerMenu();
 
