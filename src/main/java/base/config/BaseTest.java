@@ -58,7 +58,8 @@ public class BaseTest {
 
     @BeforeMethod
     public void setUp(){
-        Selenide.open("https://www.saucedemo.com/v1/");
+//        Selenide.open("https://www.saucedemo.com/v1/");
+        Selenide.open("https://www.saucedemo.com");
     }
 
 /*

@@ -40,6 +40,8 @@ public class PageObjectTest extends BaseTest {
         expectedTextsFromBurgerMenu.add("Logout");
         expectedTextsFromBurgerMenu.add("Reset App State");
 
+        System.out.println(burgerMenuPage.getBurgerMenuItemsTexts());
+
         Assert.assertEquals(expectedTextsFromBurgerMenu, burgerMenuPage.getBurgerMenuItemsTexts());
 
         burgerMenuPage.clickCloseBurgerMenuButton();
@@ -48,10 +50,10 @@ public class PageObjectTest extends BaseTest {
 
         Selenide.switchTo().window(1);
 
-
         Selenide.sleep(5000);
 
-        $(By.xpath("//div[@aria-label='Close']")).shouldBe(Condition.visible).click();
+//        $(By.xpath("//div[@aria-label='Close']")).shouldBe(Condition.visible).click();
+        $(By.xpath("//div[@aria-label='Закрити']")).shouldBe(Condition.visible).click();
 
         Assert.assertTrue($(By.xpath("//h1[text()='Sauce Labs']")).is(Condition.visible));
 

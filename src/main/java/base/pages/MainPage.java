@@ -16,6 +16,7 @@ public class MainPage {
     private final ElementsCollection itemNames = $$(By.xpath("//div[@class='inventory_item_name']"));
     private final SelenideElement mainPageLogo = $(By.xpath("//div[@class='app_logo']"));
     private final SelenideElement burgerMenuButton = $(By.xpath("//button[@id='react-burger-menu-btn']"));
+//    private final SelenideElement burgerMenuButton = $(By.xpath("//div[@class='bm-burger-button']/button"));
 
     public ElementsCollection getMainPageItems() {
         return itemNames.shouldBe(CollectionCondition.size(6));
@@ -25,9 +26,11 @@ public class MainPage {
         return itemNames.shouldBe(CollectionCondition.size(6)).texts();
     }
     public void wainUntilMainPageLoad(){
-        mainPageLogo.shouldBe(Condition.visible, Duration.ofMillis(5000));
+        System.out.println(mainPageLogo.shouldBe(Condition.visible, Duration.ofMillis(5000)));
+        System.out.println(burgerMenuButton.shouldBe(Condition.visible, Duration.ofMillis(5000)));
     }
     public void clickBurgerMenu(){
+        System.out.println(burgerMenuButton);
         burgerMenuButton.shouldBe(Condition.visible).click();
     }
 }
