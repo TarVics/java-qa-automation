@@ -74,9 +74,5 @@ public class PageObjectTest extends BaseTest {
         detailItemPage().waitDetailPageImg();
 
         System.out.println(detailItemPage().getDetailItemName() + " - " + detailItemPage().getDetailItemPrice());
-
-
-
-
     }
 }
