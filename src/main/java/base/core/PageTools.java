@@ -6,6 +6,9 @@ import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
+import java.time.Duration;
+import java.util.List;
+
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
@@ -52,6 +55,22 @@ public class PageTools extends CustomLogger {
     public String getElementText(By by, Object... args) {
         logInfo(getPreviousMethodNameAsText() + ", element -> " + byLocator(by, args));
         return shouldBe(Condition.visible, by, args).text();
+    }
+
+    protected List<String> getElementsText(By by, Object... args) {
+        logInfo(getPreviousMethodNameAsText() + ", elements -> " + byLocator(by, args));
+        return shouldBe(CollectionCondition.sizeGreaterThan(-1), by, args).texts();
+    }
+
+    protected List<SelenideElement> getElements(By by, Object... args) {
+        logInfo(getPreviousMethodNameAsText() + ", elements -> " + byLocator(by, args));
+        return shouldBe(CollectionCondition.sizeGreaterThan(-1), by, args);
+    }
+
+    protected void waitUntilElementVisibility(By by, int time, Object... args) {
+        logInfo(getPreviousMethodNameAsText() + ", should be visible in -> " + time + " seconds " + byLocator(by, args));
+        //$(byLocator(by, args)).waitUntil(Condition.visible, time);
+        $(byLocator(by, args)).shouldBe(Condition.visible, Duration.ofMillis(time));
     }
 
 }
