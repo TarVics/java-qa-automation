@@ -54,6 +54,10 @@ public class BaseTest {
 
         // Web page load timeout
         Configuration.pageLoadTimeout = 10000;
+
+
+        Configuration.holdBrowserOpen = false; // FOR JENKINS NEED HIDDEN WINDOW !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        Configuration.headless = true; // FOR JENKINS NEED HEADLESS WINDOW !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     }
 
     @BeforeMethod
