@@ -1,4 +1,4 @@
-package lesson7;
+package customTests;
 
 import base.config.BaseTest;
 import com.codeborne.selenide.Selenide;

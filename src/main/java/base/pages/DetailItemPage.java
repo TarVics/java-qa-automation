@@ -17,6 +17,7 @@ public class DetailItemPage extends PageTools {
 
     private final By detailItemPrice = By.xpath("//div[contains(@class, 'inventory_details_price')]");
     private final SelenideElement detailItemImg = $(By.xpath("//img[@class='inventory_details_img']"));
+    private final By backToProductsBtn = By.xpath("//button[@id='back-to-products']");
 
     public void waitDetailPageImg() {
         //detailItemImg.waitUntil(Condition.visible, 5000);
@@ -39,5 +40,8 @@ public class DetailItemPage extends PageTools {
         return item;
     }
 
+    public boolean isBackToProductsButtonExist() {
+        return isElementExists(backToProductsBtn);
+    }
 
 }

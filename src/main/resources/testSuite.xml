@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestSuite">
+    <test name="RegressionTests">
+        <packages>
+            <package name="lesson7.*"/>
+            <package name="lesson8.*"/>
+        </packages>
+    </test>
+</suite>

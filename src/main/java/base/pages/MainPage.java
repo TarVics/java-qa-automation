@@ -25,6 +25,11 @@ public class MainPage extends PageTools {
     private final By elementPrices = By.xpath("//div[@class='inventory_item_price']");
     private final By mainPageLogotype = By.xpath("//div[@class='app_logo']");
 
+    private final By itemHeaderByName = By.xpath("//div[@class='inventory_item_name' and text()='%s']");
+    private final By filterButton = By.xpath("//select[@class='product_sort_container']");
+    private final By optionByID = By.xpath("//select[@class='product_sort_container']/option[%d]");
+    private final By addToShoppingCardButton = By.xpath("//button[text()='Add to cart']");
+    private final By shoppingCardButton = By.xpath("//a[@class='shopping_cart_link']");
     public ElementsCollection getMainPageItems() {
         return itemNames.shouldBe(CollectionCondition.size(6));
     }
@@ -40,6 +45,7 @@ public class MainPage extends PageTools {
     public void clickBurgerMenu() {
         burgerMenuButton.shouldBe(Condition.visible).click();
     }
+
 
     public List<Item> getItems() {
         List<Item> itemList = new ArrayList<>();
@@ -58,7 +64,27 @@ public class MainPage extends PageTools {
         return itemList;
     }
 
-    public void waitMainPageLogo(int time){
+    public void waitMainPageLogo(int time) {
         waitUntilElementVisibility(mainPageLogotype, time);
+    }
+
+    public void clickItemByName(String name) {
+        click(itemHeaderByName, name);
+    }
+
+    public void clickFilterButton() {
+        click(filterButton);
+    }
+    public void clickFilterOptionByID(int id){
+        click(optionByID, id);
+    }
+    public void clickAddToShoppingCardButton(){
+        click(addToShoppingCardButton);
+    }
+    public List<SelenideElement> getAddToCartList(){
+        return getElements(addToShoppingCardButton);
+    }
+    public void clickShoppingCardButton(){
+        click(shoppingCardButton);
     }
 }

@@ -72,5 +72,10 @@ public class PageTools extends CustomLogger {
         //$(byLocator(by, args)).waitUntil(Condition.visible, time);
         $(byLocator(by, args)).shouldBe(Condition.visible, Duration.ofMillis(time));
     }
+    
+    protected boolean isElementExists(By by, Object... args){
+        logInfo(getPreviousMethodNameAsText() + ", element exists -> " + byLocator(by, args));
+        return $(byLocator(by,args)).is(Condition.visible);
+    }
 
 }
