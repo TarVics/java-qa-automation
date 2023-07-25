@@ -1,4 +1,4 @@
-package testPackage.innerTest;
+package gui.testPackage.innerTest;
 
 import base.config.BaseTest;
 import org.testng.annotations.*;

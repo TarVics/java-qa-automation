@@ -1,4 +1,4 @@
-package lesson3;
+package gui.lesson3;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.FileDownloadMode;

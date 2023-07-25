@@ -1,4 +1,4 @@
-package testPackage;
+package gui.testPackage;
 
 import org.testng.annotations.*;
 

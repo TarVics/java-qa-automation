@@ -1,4 +1,4 @@
-package lesson8;
+package gui.lesson8;
 
 import base.config.BaseTest;
 import com.codeborne.selenide.Selenide;
