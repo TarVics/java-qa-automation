@@ -7,7 +7,6 @@ import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.AbstractMap;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -98,6 +97,3 @@ public class RestAssuredTest {
     }
 }
 
-
-
-}

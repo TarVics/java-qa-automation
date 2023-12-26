@@ -15,7 +15,7 @@
         <slf4j.version>2.0.7</slf4j.version>
         <testng.version>7.8.0</testng.version>
         <selenide.version>6.15.0</selenide.version>
-        <logback.version>1.4.8</logback.version>
+        <logback.version>1.4.12</logback.version>
         <allure.version>2.12.0</allure.version>
         <aspectj.version>1.9.6</aspectj.version>
     </properties>
@@ -79,8 +79,9 @@
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
             <version>5.3.0</version>
-            <scope>test</scope>
+            <scope>compile</scope>
         </dependency>
+
 
 <!--        <dependency>-->
 <!--            <groupId>org.json</groupId>-->
@@ -92,6 +93,20 @@
             <groupId>com.googlecode.json-simple</groupId>
             <artifactId>json-simple</artifactId>
             <version>1.1.1</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.15.2</version>
         </dependency>
 
     </dependencies>
